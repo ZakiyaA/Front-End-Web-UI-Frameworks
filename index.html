@@ -32,26 +32,73 @@
                 </ul>
             </div>
         </div>
-      </nav>
+        <span class="navbar-text">
+            <a  data-toggle="modal" data-target="#myModal">
+                <span class="fa fa-sign-in"></span> Login</a>
+        </span>
+       
+    </nav>
+    
 
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Login</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+
+            <form>
+                <div class="row">
+                  <div class="col-12 col-md-4">
+                    <input type="email" class="form-control" placeholder="Enter Your Email">
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <input type="password" class="form-control" placeholder="Password">
+                  </div>
+                  <div class="col-12 col-md ml-1">
+                    <input type="checkbox" class="form-check-input" id="reminder" required>
+                    <label class="form-check-label " for="exampleCheck1">Remember Me</label>
+                   </div>
+                </div>
+              </form>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" >Sign In</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
-                <div class="col-sm-6">
+                <div class="col-12 col-sm-6">
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our
                         lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <!-- <div class="col-6 col-sm"> -->
-                    <div class="col-sm-3">
+                    <div class="col-12 col-sm-3 align-self-center">
                         <img src="img/logo.png" alt="" class="img-fluid">
                     </div>
-                    <div class="col-sm-3 d-flex align-items-center justify-content-center">
-                        <button type="button" class="btn btn-sm btn-block btn-warning">
-                            <a href="#reserve-table" style="text-decoration: none" class="text-dark">Reserve Table</a>
-                        </button>
+                    <div class="col-12 col-sm-3 align-self-center">                     
+                        <a role="button" href="#reserve-table" 
+                            class="btn btn-sm btn-block btn-warning" 
+                            data-toggle="tooltip" 
+                            data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
+                            >
+                            Reserve Table
+                        </a>
                     </div>
-                <!-- </div> -->
             </div>
         </div>
     </header>
@@ -221,6 +268,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+        });
+        </script>
 </body>
 
 </html>
